@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="AnchorPane" prefHeight="569.0" prefWidth="581.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calculator.FXMLDocumentController">
+   <children>
+           
+        <TextField fx:id="display" alignment="CENTER_RIGHT" layoutX="20.0" layoutY="41.0" minHeight="16" minWidth="69" prefHeight="110.0" prefWidth="539.0" text="0" editable = "false"/>
+        
+        <Button fx:id = "btn1" layoutX="250.0" layoutY="163.0" mnemonicParsing="false" onAction="#handleNum" prefHeight="70.0" prefWidth="70.0" text="1" />
+        <Button fx:id = "btn2" layoutX="326.0" layoutY="163.0" mnemonicParsing="false" onAction="#handleNum" prefHeight="70.0" prefWidth="70.0" text="2" />
+        <Button fx:id = "btn3" layoutX="405.0" layoutY="163.0" mnemonicParsing="false" onAction="#handleNum" prefHeight="70.0" prefWidth="70.0" text="3" />
+        <Button fx:id = "btn4" layoutX="250.0" layoutY="245.0" mnemonicParsing="false" onAction="#handleNum" prefHeight="70.0" prefWidth="70.0" text="4" />
+        <Button fx:id = "btn5" layoutX="326.0" layoutY="245.0" mnemonicParsing="false" onAction="#handleNum" prefHeight="70.0" prefWidth="70.0" text="5" />
+        <Button fx:id = "btn6" layoutX="405.0" layoutY="245.0" mnemonicParsing="false" onAction="#handleNum" prefHeight="70.0" prefWidth="70.0" text="6" />   
+        <Button fx:id = "btn7" layoutX="250.0" layoutY="322.0" mnemonicParsing="false" onAction="#handleNum" prefHeight="70.0" prefWidth="70.0" text="7" />   
+        <Button fx:id = "btn8" layoutX="326.0" layoutY="322.0" mnemonicParsing="false" onAction="#handleNum" prefHeight="70.0" prefWidth="70.0" text="8" />  
+        <Button fx:id = "btn9" layoutX="405.0" layoutY="322.0" mnemonicParsing="false" onAction="#handleNum" prefHeight="70.0" prefWidth="70.0" text="9" />          
+        <Button fx:id = "btn0" layoutX="326.0" layoutY="399.0" mnemonicParsing="false" onAction="#handleNum" prefHeight="70.0" prefWidth="70.0" text="0" />
+        
+        <Button fx:id = "btnA" layoutX="484.0" layoutY="163.0" mnemonicParsing="false" onAction="#handleOP" prefHeight="70.0" prefWidth="70.0" text="+" />
+        <Button fx:id = "btnS" layoutX="484.0" layoutY="245.0" mnemonicParsing="false" onAction="#handleOP" prefHeight="70.0" prefWidth="70.0" text="-" />        
+        <Button fx:id = "btnM" layoutX="484.0" layoutY="322.0" mnemonicParsing="false" onAction="#handleOP" prefHeight="70.0" prefWidth="70.0" text="*" />
+        <Button fx:id = "btnD" layoutX="484.0" layoutY="399.0" mnemonicParsing="false" onAction="#handleOP" prefHeight="70.0" prefWidth="70.0" text="/" />
+        
+        <Button fx:id = "btnPM" layoutX="250.0" layoutY="399.0" mnemonicParsing="false" onAction="#handlePM" prefHeight="70.0" prefWidth="70.0" text="+/-" />
+        <Button fx:id = "btnDec" layoutX="405.0" layoutY="399.0" mnemonicParsing="false" onAction="#handleDot" prefHeight="70.0" prefWidth="70.0" text="." />
+        <Button fx:id = "btnCE" layoutX="250.0" layoutY="476.0" mnemonicParsing="false" onAction="#handleCE" prefHeight="70.0" prefWidth="70.0" text="CE" />
+        <Button fx:id = "btnEQ" layoutX="405.0" layoutY="476.0" mnemonicParsing="false" onAction="#handleEq" prefHeight="70.0" prefWidth="149.0" text="=" />
+        <Button fx:id = "btnC" layoutX="326.0" layoutY="476.0" mnemonicParsing="false" onAction="#handleC" prefHeight="70.0" prefWidth="70.0" text="C" />   
+
+        <HBox prefHeight="32.0" prefWidth="581.0">
+            <children>
+                     <MenuBar prefHeight="32.0" prefWidth="556.0" HBox.hgrow="ALWAYS">
+                        <menus>
+                            <Menu mnemonicParsing="false" text="Mode">
+                                <items>
+                                 <MenuItem fx:id="itmStandard" mnemonicParsing="false" onAction="#handleSwitch" text="Standard" />
+                                 <MenuItem fx:id="itmScientific" mnemonicParsing="false" onAction="#handleSwitch" text="Scientific" />
+
+                                 <MenuItem mnemonicParsing="false" text="Close" onAction="#handleClose" />
+                                </items>
+                            </Menu>
+
+                            <Menu mnemonicParsing="false" text="Game">
+                                <items>
+                                     <Menu mnemonicParsing="false" text="Addition">
+                                        <items>
+                                            <MenuItem text="Easy" onAction = "#handleGame"/>
+                                            <MenuItem text="Medium" onAction = "#handleGame"/>
+                                            <MenuItem text="Hard" onAction = "#handleGame"/>
+                                        </items>
+                                     </Menu>
+                                     <Menu mnemonicParsing="false" text="Subtraction">
+                                        <items> 
+                                           <MenuItem text="Easy" onAction = "#handleGame"/>
+                                           <MenuItem text="Medium" onAction = "#handleGame"/>
+                                           <MenuItem text="Hard" onAction = "#handleGame"/>
+                                        </items>
+                                     </Menu>
+                                     <Menu mnemonicParsing="false" text="Multiplication">
+                                        <items>
+                                            <MenuItem text="Easy" onAction = "#handleGame"/>
+                                            <MenuItem text="Medium" onAction = "#handleGame"/>
+                                            <MenuItem text="Hard" onAction = "#handleGame"/>
+                                        </items>
+                                     </Menu>
+                                     <Menu mnemonicParsing="false" text="Division">
+                                        <items>
+                                            <MenuItem text="Easy" onAction = "#handleGame"/>
+                                            <MenuItem text="Medium" onAction = "#handleGame"/>
+                                            <MenuItem text="Hard" onAction = "#handleGame"/>
+                                        </items>
+                                     </Menu>
+                                </items>
+                            </Menu>
+                            <Menu mnemonicParsing="false" text="Settings">
+                                <items>
+                                <MenuItem mnemonicParsing="false" text="Preferences" onAction = "#handleSettings"/>
+                                </items>
+                            </Menu>
+                        </menus>
+                    </MenuBar>
+            </children>
+      
+        </HBox>
+      <Button fx:id = "btnDel" layoutX="174.0" layoutY="476.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="del" onAction = "#handleDel"/>
+      <Button fx:id = "btnMod" layoutX="174.0" layoutY="399.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="Mod" onAction = "#handleOP"/>
+      <Button fx:id = "btnTan" layoutX="174.0" layoutY="322.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="Tan" onAction = "#handleTrig"/>
+      <Button fx:id = "btnEx" layoutX="174.0" layoutY="245.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="e^x" onAction = "#handleSingleEx"/>
+      <Button fx:id = "btnSqrt" layoutX="174.0" layoutY="163.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="Sqrt" onAction= "#handleTrig" />
+      <Button fx:id = "btnXY" layoutX="97.0" layoutY="163.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="x^y" onAction = "#handleOP"/>
+      <Button fx:id = "btnLog" layoutX="97.0" layoutY="245.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="log" onAction = "#handleTrig"/>
+      <Button fx:id = "btnCos" layoutX="97.0" layoutY="322.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="Cos" onAction = "#handleTrig"/>
+      <Button fx:id = "btnN" layoutX="97.0" layoutY="399.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="n!" onAction = "#handleSingleEx"/>
+      <Button fx:id = "btnClose" layoutX="97.0" layoutY="476.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text=")" onAction = "#handleCloseP" />
+      <Button fx:id = "btnOpen" layoutX="21.0" layoutY="476.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="(" onAction = "#handleOpenP"/>
+      <Button fx:id = "btnPi" layoutX="21.0" layoutY="399.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="pi" onAction = "#handlePI"/>
+      <Button fx:id = "btnSin" layoutX="21.0" layoutY="322.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="Sin" onAction = "#handleTrig"/>
+      <Button fx:id = "btn10X" layoutX="21.0" layoutY="245.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="10^x"  onAction = "#handleSingleEx"/>
+      <Button fx:id = "btnSq" layoutX="21.0" layoutY="163.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="x^2" onAction = "#handleSingleEx"/>
+
+                          
+   </children>
+
+</AnchorPane>
